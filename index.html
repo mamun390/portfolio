@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="dashboard-container">
+        <aside class="sidebar">
+            <div class="profile-info">
+                <img src="mamun.png" alt="Profile Picture" class="profile-picture">
+                <h2>Kazi Rashadul Haque</h2>
+                <p>Student</p>
+            </div>
+            <ul class="nav-list">
+                <li><a href="#personal-info" class="nav-item" onclick="showSection('personal-info')">Personal Info</a></li>
+                <li><a href="#profile-summary" class="nav-item" onclick="showSection('profile-summary')">Profile Summary</a></li>
+                <li><a href="#projects" class="nav-item" onclick="showSection('projects')">Projects</a></li>
+                <li><a href="#skills" class="nav-item" onclick="showSection('skills')">Skills</a></li>
+                <li><a href="#contact" class="nav-item" onclick="showSection('contact')">Contact</a></li>
+            </ul>
+        </aside>
+
+        <main class="main-content">
+            <header id="dashboard" class="main-header" style="display: none;">
+                <!-- Dashboard content -->
+            </header>
+
+            <section id="personal-info" class="info-section card personal-info" style="display: block;">
+                <h2>Personal Info</h2>
+                <p><strong>Full Name:</strong> Md Abdullah Al Mamun</p>
+                <p><strong>Email:</strong> <a href="mailto:mamun.jucse29@gmail.com">mamun.jucse29@gmail.com</a></p>
+                <p><strong>Contact Number:</strong> 01764901306</p>
+                <p><strong>Date of Birth:</strong> 26/07/1999</p>
+            </section>
+
+            <section id="profile-summary" class="info-section card profile-summary" style="display: none;">
+                <img src="mamun.png" alt="Profile Picture" class="profile-summary-picture">
+                <h2>Md Abdullah Al Mamun</h2>
+                <p><strong>Role:</strong> Student</p>
+                <p><strong>Location:</strong> Jahangirnagar University</p>
+                <p><strong>About You:</strong> I am a student.</p>
+            </section>
+
+            <section id="projects" class="info-section card" style="display: none;">
+                <h2>Projects</h2>
+                <p><strong>Project 1:</strong> Description of the first project.</p>
+                <p><strong>Project 2:</strong> Description of the second project.</p>
+            </section>
+
+            <section id="skills" class="info-section card" style="display: none;">
+                <h2>Skills</h2>
+                <ul>
+                    <li>HTML & CSS</li>
+                    <li>JavaScript</li>
+                    <li>Python</li>
+                    <li>Java</li>
+                </ul>
+            </section>
+
+            <section id="contact" class="info-section card" style="display: none;">
+                <h2>Contact</h2>
+                <p><strong>Email:</strong> <a href="mailto:mamun.jucse29@gmail.com">mamun.jucse29@gmail.com</a></p>
+                <p><strong>Phone:</strong> 01764901306</p>
+            </section>
+        </main>
+    </div>
+
+    <script>
+        function showSection(sectionId) {
+            // Hide all sections
+            document.querySelectorAll('.info-section').forEach(section => {
+                section.style.display = 'none';
+            });
+
+            // Hide dashboard header
+            document.getElementById('dashboard').style.display = 'none';
+
+            // Show the selected section
+            document.getElementById(sectionId).style.display = 'block';
+        }
+    </script>
+</body>
+</html>
